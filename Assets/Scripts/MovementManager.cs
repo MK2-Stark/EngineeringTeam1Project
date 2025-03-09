@@ -68,15 +68,7 @@ public class MovementManager : MonoBehaviour
     {
         //base joint is selected by default on Awake
         baseJointSelected();
-
-        //baseRend = baseJoint.GetComponent<MeshRenderer>();
-        //ShoulderRend = shoulderJoint.GetComponent<MeshRenderer>();
-        //elbowRend = elbowJoint.GetComponent<MeshRenderer>();
-        //wristVertRend = wristVertJoint.GetComponent<MeshRenderer>();
-
     }
-
-   
 
     //Base Joint does local pivot rotate on Y axis.
     public void minusYPressed()
