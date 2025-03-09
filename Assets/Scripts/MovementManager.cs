@@ -17,20 +17,20 @@ public class MovementManager : MonoBehaviour
     private bool isShoulderJoint = false;
     public bool ShoulderBoolField
     {
-        get { return isBaseJoint; }
+        get { return isShoulderJoint; }
     }
 
     private bool isElbowJoint = false;
     public bool ElbowBoolField
     {
-        get { return isBaseJoint; }
+        get { return isElbowJoint; }
     }
 
 
     private bool isWristVertJoint = false;
     public bool WristBoolField
     {
-        get { return isBaseJoint; }
+        get { return isWristVertJoint; }
     }
 
     //Buttons GameObjects

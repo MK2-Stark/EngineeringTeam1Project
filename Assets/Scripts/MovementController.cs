@@ -66,8 +66,9 @@ public class MovementController : MonoBehaviour
         
         if (movementManager.BaseBoolField == true)
         {
-            Debug.Log("--Positive Y Rotation Occured");
+            
             if (selectedJoint.y <= 180)
+                Debug.Log("-- Base +Y Occured");
                 jointToMove.transform.localEulerAngles = selectedJoint;
         }
     }
@@ -81,8 +82,9 @@ public class MovementController : MonoBehaviour
 
         if (movementManager.BaseBoolField == true)
         {
-            Debug.Log("--Negative Y Rotation Occured");
+            
             if (selectedJoint.y >= 0)
+                Debug.Log("-- Base -Y Occured");
                 jointToMove.transform.localEulerAngles = selectedJoint;
         }
     }
@@ -96,17 +98,20 @@ public class MovementController : MonoBehaviour
         {
             if (selectedJoint.z <= 75)
                 jointToMove.transform.localEulerAngles = selectedJoint;
+                Debug.Log("-- Shoulder +Z Occured");
         }
         if (movementManager.ElbowBoolField == true)
         {
             if (selectedJoint.z >= 47)
                 jointToMove.transform.localEulerAngles = selectedJoint;
+                Debug.Log("-- Elbow +Z Occured");
         }
 
         if (movementManager.WristBoolField == true)
         {
             if (selectedJoint.z >= 90)
                 jointToMove.transform.localEulerAngles = selectedJoint;
+                Debug.Log("-- Wrist +Z Occured");
         }
 
     }
@@ -120,17 +125,20 @@ public class MovementController : MonoBehaviour
         {
             if (selectedJoint.z >= -75)
                 jointToMove.transform.localEulerAngles = selectedJoint;
+                Debug.Log("-- Shoulder -Z Occured");
         }
         if (movementManager.ElbowBoolField == true)
         {
             if (selectedJoint.z >= -133)
                 jointToMove.transform.localEulerAngles = selectedJoint;
+                Debug.Log("-- Elbow -Z Occured");
         }
 
         if (movementManager.WristBoolField == true)
         {
             if (selectedJoint.z >= -90)
                 jointToMove.transform.localEulerAngles = selectedJoint;
+                Debug.Log("-- Wrist -Z Occured");
         }
     }
 
