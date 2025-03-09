@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    private MovementManager movementManager;
+    [SerializeField] private MovementManager movementManager;
     //joints
     private Vector3 selectedJoint;
 
@@ -63,9 +63,13 @@ public class MovementController : MonoBehaviour
         
         selectedJoint = jointToMove.transform.localEulerAngles;
         selectedJoint.y += 1;
-
-        if (selectedJoint.y <= 180)
-            jointToMove.transform.localEulerAngles = selectedJoint;
+        
+        if (movementManager.BaseBoolField == true)
+        {
+            Debug.Log("--Positive Y Rotation Occured");
+            if (selectedJoint.y <= 180)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
     }
 
 
@@ -75,24 +79,12 @@ public class MovementController : MonoBehaviour
         selectedJoint = jointToMove.transform.localEulerAngles;
         selectedJoint.y -= 1;
 
-        if (movementManager.ShoulderBoolField == true)
+        if (movementManager.BaseBoolField == true)
         {
+            Debug.Log("--Negative Y Rotation Occured");
             if (selectedJoint.y >= 0)
                 jointToMove.transform.localEulerAngles = selectedJoint;
         }
-
-        if (movementManager.ElbowBoolField == true)
-        {
-            if (selectedJoint.y >= 0)
-                jointToMove.transform.localEulerAngles = selectedJoint;
-        }
-
-        if (movementManager.WristBoolField == true)
-        {
-            if (selectedJoint.y >= 0)
-                jointToMove.transform.localEulerAngles = selectedJoint;
-        }
-
     }
 
     public void positiveZRotation(GameObject jointToMove)

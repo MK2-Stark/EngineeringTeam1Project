@@ -49,16 +49,16 @@ public class MovementManager : MonoBehaviour
 
     //GameObjects
     [SerializeField] private GameObject baseJoint;
-    private MeshRenderer baseRend;
+    [SerializeField] private MeshRenderer baseRend;
 
     [SerializeField] private GameObject shoulderJoint;
-    private MeshRenderer ShoulderRend;
+    [SerializeField] private MeshRenderer ShoulderRend;
 
     [SerializeField] private GameObject elbowJoint;
-    private MeshRenderer elbowRend;
+    [SerializeField] private MeshRenderer elbowRend;
 
     [SerializeField] private GameObject wristVertJoint;
-    private MeshRenderer wristVertRend;
+    [SerializeField] private MeshRenderer wristVertRend;
 
     //Materials
     [SerializeField] private Material defaultMaterial;
@@ -69,10 +69,10 @@ public class MovementManager : MonoBehaviour
         //base joint is selected by default on Awake
         baseJointSelected();
 
-        baseRend = baseJoint.GetComponent<MeshRenderer>();
-        ShoulderRend = shoulderJoint.GetComponent<MeshRenderer>();
-        elbowRend = elbowJoint.GetComponent<MeshRenderer>();
-        wristVertRend = wristVertJoint.GetComponent<MeshRenderer>();
+        //baseRend = baseJoint.GetComponent<MeshRenderer>();
+        //ShoulderRend = shoulderJoint.GetComponent<MeshRenderer>();
+        //elbowRend = elbowJoint.GetComponent<MeshRenderer>();
+        //wristVertRend = wristVertJoint.GetComponent<MeshRenderer>();
 
     }
 
