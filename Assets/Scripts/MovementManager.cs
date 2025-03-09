@@ -2,16 +2,36 @@ using Meta.XR.ImmersiveDebugger.UserInterface.Generic;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MovementManager : MonoBehaviour
 {
     [SerializeField] private MovementController controller;
 
     //joint selection bools
-    bool isBaseJoint = true;//base joint will be default selected joint
-    bool isShoulderJoint = false;
-    bool isElbowJoint = false;
-    bool isWristVertJoint = false;
+    private bool isBaseJoint = true;//base joint will be default selected joint
+    public bool BaseBoolField{
+        get{ return isBaseJoint;}
+    }
+
+    private bool isShoulderJoint = false;
+    public bool ShoulderBoolField
+    {
+        get { return isBaseJoint; }
+    }
+
+    private bool isElbowJoint = false;
+    public bool ElbowBoolField
+    {
+        get { return isBaseJoint; }
+    }
+
+
+    private bool isWristVertJoint = false;
+    public bool WristBoolField
+    {
+        get { return isBaseJoint; }
+    }
 
     //Buttons GameObjects
     [SerializeField] private GameObject baseButton;

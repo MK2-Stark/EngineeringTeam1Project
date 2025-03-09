@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-
+    private MovementManager movementManager;
     //joints
     private Vector3 selectedJoint;
 
@@ -63,6 +63,7 @@ public class MovementController : MonoBehaviour
         
         selectedJoint = jointToMove.transform.localEulerAngles;
         selectedJoint.y += 1;
+
         if (selectedJoint.y <= 180)
             jointToMove.transform.localEulerAngles = selectedJoint;
     }
@@ -73,8 +74,25 @@ public class MovementController : MonoBehaviour
         //Joint angular local pivot rotation on -Y axis.
         selectedJoint = jointToMove.transform.localEulerAngles;
         selectedJoint.y -= 1;
-        if (selectedJoint.y >= 0)
-            jointToMove.transform.localEulerAngles = selectedJoint;
+
+        if (movementManager.ShoulderBoolField == true)
+        {
+            if (selectedJoint.y >= 0)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+
+        if (movementManager.ElbowBoolField == true)
+        {
+            if (selectedJoint.y >= 0)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+
+        if (movementManager.WristBoolField == true)
+        {
+            if (selectedJoint.y >= 0)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+
     }
 
     public void positiveZRotation(GameObject jointToMove)
@@ -82,8 +100,23 @@ public class MovementController : MonoBehaviour
         //Joint angular local pivot rotation on +Z axis.
         selectedJoint = jointToMove.transform.localEulerAngles;
         selectedJoint.z += 1;
-        if (selectedJoint.z <= 75)
-            jointToMove.transform.localEulerAngles = selectedJoint;
+        if (movementManager.ShoulderBoolField == true)
+        {
+            if (selectedJoint.z <= 75)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+        if (movementManager.ElbowBoolField == true)
+        {
+            if (selectedJoint.z >= 47)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+
+        if (movementManager.WristBoolField == true)
+        {
+            if (selectedJoint.z >= 90)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+
     }
 
     public void negativeZRotation(GameObject jointToMove)
@@ -91,8 +124,22 @@ public class MovementController : MonoBehaviour
         //Joint angular local pivot rotation on -Z axis.
         selectedJoint = jointToMove.transform.localEulerAngles;
         selectedJoint.z -= 1;
-        if (selectedJoint.z >= -75)
-            jointToMove.transform.localEulerAngles = selectedJoint;
+        if (movementManager.ShoulderBoolField == true)
+        {
+            if (selectedJoint.z >= -75)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+        if (movementManager.ElbowBoolField == true)
+        {
+            if (selectedJoint.z >= -133)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
+
+        if (movementManager.WristBoolField == true)
+        {
+            if (selectedJoint.z >= -90)
+                jointToMove.transform.localEulerAngles = selectedJoint;
+        }
     }
 
     //private bool minMaxBaseJointLimits()
