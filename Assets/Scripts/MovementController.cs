@@ -96,9 +96,10 @@ public class MovementController : MonoBehaviour
         selectedJoint.z += 1;
         if (movementManager.ShoulderBoolField == true)
         {
-            if (selectedJoint.z <= 75)
+            if (selectedJoint.z >= 75)
                 jointToMove.transform.localEulerAngles = selectedJoint;
                 Debug.Log("-- Shoulder +Z Occured");
+
         }
         if (movementManager.ElbowBoolField == true)
         {
