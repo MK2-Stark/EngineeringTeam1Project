@@ -56,7 +56,15 @@ public class MovementController : MonoBehaviour
     //{
 
     //}
+    public void ActiveStartingPosition()
+    {
 
+    }
+
+    public void DeactiveStartingPosition()
+    {
+
+    }
     public void positiveYRotation(GameObject jointToMove)
     {
         //Joint angular local pivot rotation on +Y axis.

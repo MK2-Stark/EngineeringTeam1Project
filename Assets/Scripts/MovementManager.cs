@@ -53,12 +53,15 @@ public class MovementManager : MonoBehaviour
 
     [SerializeField] private GameObject shoulderJoint;
     [SerializeField] private MeshRenderer ShoulderRend;
+    private Vector3 shoulderStartingV3 = new Vector3(0f, 0f, 0f);
 
     [SerializeField] private GameObject elbowJoint;
     [SerializeField] private MeshRenderer elbowRend;
+    private Vector3 elbowStartingV3 = new Vector3(0.606f, 0.12f, -95f);
 
     [SerializeField] private GameObject wristVertJoint;
     [SerializeField] private MeshRenderer wristVertRend;
+    private Vector3 wristVertStartingV3 = new Vector3(0f, 0f, 90f);
 
     //Materials
     [SerializeField] private Material defaultMaterial;
@@ -68,6 +71,18 @@ public class MovementManager : MonoBehaviour
     {
         //base joint is selected by default on Awake
         baseJointSelected();
+        ActiveStartingPosition();
+    }
+    public void ActiveStartingPosition()
+    {
+        elbowJoint.transform.localEulerAngles = elbowStartingV3;
+        wristVertJoint.transform.localEulerAngles = wristVertStartingV3;
+        shoulderJoint.transform.localEulerAngles = shoulderStartingV3;
+    }
+
+    public void DeactiveStartingPosition()
+    {
+
     }
 
     //Base Joint does local pivot rotate on Y axis.
