@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class MovementManager : MonoBehaviour
 {
     [SerializeField] private MovementController controller;
+    [SerializeField] private SendRequest sendRequest;
 
     //joint selection bools
     private bool isBaseJoint = true;//base joint will be default selected joint
@@ -226,5 +227,10 @@ public class MovementManager : MonoBehaviour
         //enable - + Z keys
         minZButton.SetActive(true);
         posZButton.SetActive(true);
+    }
+
+    public void SendButtonPressed()
+    {
+        //sendRequest9
     }
 }
