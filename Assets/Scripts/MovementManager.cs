@@ -81,11 +81,6 @@ public class MovementManager : MonoBehaviour
         shoulderJoint.transform.localEulerAngles = shoulderStartingV3;
     }
 
-    public void DeactiveStartingPosition()
-    {
-
-    }
-
     //Base Joint does local pivot rotate on Y axis.
     public void minusYPressed()
     {
@@ -229,8 +224,8 @@ public class MovementManager : MonoBehaviour
         posZButton.SetActive(true);
     }
 
-    public void SendButtonPressed()
+    public void SendButtonClicked()
     {
-        //sendRequest9
+        sendRequest.SaveToJSONBeforeSend(baseJoint, elbowJoint, wristVertJoint);
     }
 }

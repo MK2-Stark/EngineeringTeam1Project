@@ -2355,7 +2355,6 @@ GameObject:
   m_Component:
   - component: {fileID: 713244176}
   - component: {fileID: 713244177}
-  - component: {fileID: 713244178}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -2392,19 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4687130946e18634dab2eab76666e32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementManager: {fileID: 1001806465}
---- !u!114 &713244178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713244175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b2753a9e4633144929165d28bc20a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  movementManager: {fileID: 857692409}
 --- !u!1 &732381536
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,8 +3510,9 @@ GameObject:
   - component: {fileID: 857692407}
   - component: {fileID: 857692406}
   - component: {fileID: 857692405}
+  - component: {fileID: 857692409}
   m_Layer: 5
-  m_Name: Send
+  m_Name: 2DUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3613,6 +3601,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &857692409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857692404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4ff90aaa09b3a4c99cb7c123a0ee0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 713244177}
+  sendRequest: {fileID: 509203078}
+  baseButton: {fileID: 1789743024}
+  shoulderButton: {fileID: 1278493129}
+  elbowButton: {fileID: 958768316}
+  wristVertButton: {fileID: 1190322341}
+  minYButton: {fileID: 1001806469}
+  posYButton: {fileID: 1001806468}
+  minZButton: {fileID: 1001806467}
+  posZButton: {fileID: 1001806466}
+  sendButton: {fileID: 1454966285}
+  baseJoint: {fileID: 713244175}
+  baseRend: {fileID: 1463069525}
+  shoulderJoint: {fileID: 8061439}
+  ShoulderRend: {fileID: 825265342}
+  elbowJoint: {fileID: 2137394853}
+  elbowRend: {fileID: 1507314739}
+  wristVertJoint: {fileID: 1194590974}
+  wristVertRend: {fileID: 1435984048}
+  defaultMaterial: {fileID: 2100000, guid: 3249a17750205994bb0bfd438999362d, type: 2}
+  selectedMaterial: {fileID: 2100000, guid: 4e8c07c98f559a348992a3ff009bcd60, type: 2}
 --- !u!1 &868724340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,7 +3824,7 @@ PrefabInstance:
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -4337,7 +4358,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 168775997871339424, guid: 6cdae152c904f8a4db9f6da2328f153d,
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -4372,7 +4393,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 168775998437062738, guid: 6cdae152c904f8a4db9f6da2328f153d,
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -4412,7 +4433,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 168775998513642123, guid: 6cdae152c904f8a4db9f6da2328f153d,
         type: 3}
       propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -4462,7 +4483,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 168775999034508303, guid: 6cdae152c904f8a4db9f6da2328f153d,
         type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -4939,11 +4960,7 @@ PrefabInstance:
         type: 3}
       insertIndex: 0
       addedObject: {fileID: 732381537}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 168775997839364126, guid: 6cdae152c904f8a4db9f6da2328f153d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1001806465}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cdae152c904f8a4db9f6da2328f153d, type: 3}
 --- !u!4 &1001806463 stripped
 Transform:
@@ -4951,45 +4968,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1001806462}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1001806464 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 168775997839364126, guid: 6cdae152c904f8a4db9f6da2328f153d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1001806462}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1001806465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001806464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be4ff90aaa09b3a4c99cb7c123a0ee0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 713244177}
-  sendRequest: {fileID: 0}
-  baseButton: {fileID: 1789743024}
-  shoulderButton: {fileID: 1278493129}
-  elbowButton: {fileID: 958768316}
-  wristVertButton: {fileID: 1190322341}
-  minYButton: {fileID: 1001806469}
-  posYButton: {fileID: 1001806468}
-  minZButton: {fileID: 1001806467}
-  posZButton: {fileID: 1001806466}
-  sendButton: {fileID: 1454966285}
-  baseJoint: {fileID: 713244175}
-  baseRend: {fileID: 1463069525}
-  shoulderJoint: {fileID: 8061439}
-  ShoulderRend: {fileID: 825265342}
-  elbowJoint: {fileID: 2137394853}
-  elbowRend: {fileID: 1507314739}
-  wristVertJoint: {fileID: 1194590974}
-  wristVertRend: {fileID: 1435984048}
-  defaultMaterial: {fileID: 2100000, guid: 3249a17750205994bb0bfd438999362d, type: 2}
-  selectedMaterial: {fileID: 2100000, guid: 4e8c07c98f559a348992a3ff009bcd60, type: 2}
 --- !u!1 &1001806466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3510283422061921197, guid: 6cdae152c904f8a4db9f6da2328f153d,
@@ -5218,7 +5196,7 @@ PrefabInstance:
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -5516,7 +5494,7 @@ PrefabInstance:
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -6860,7 +6838,7 @@ PrefabInstance:
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1001806465}
+      objectReference: {fileID: 0}
     - target: {fileID: 1438875814, guid: 9f717ba020826834a98daf42c0d358da, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -7524,7 +7502,7 @@ GameObject:
   - component: {fileID: 1950722598}
   - component: {fileID: 1950722597}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SendButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7593,7 +7571,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1950722598}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 857692409}
+        m_TargetAssemblyTypeName: MovementManager, Assembly-CSharp
+        m_MethodName: SendButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1950722598
 MonoBehaviour:
   m_ObjectHideFlags: 0

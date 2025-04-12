@@ -1,0 +1,9 @@
+{
+    "delay": 20,
+    "base": 0,
+    "shoulder": 0,
+    "elbow": -95,
+    "wristVertical": 90,
+    "wristRotation": 40,
+    "gripper": 10
+}

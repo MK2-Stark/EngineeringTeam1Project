@@ -6,10 +6,10 @@ using UnityEngine;
 public class RobotArmData
 {
     public int delay;
-    public int baseJ;
-    public int shoulderJ;
-    public int elbowJ;
-    public int wristVerticalJ;
-    public int wristRotationJ;
-    public int gripperJ;
+    public int @base;
+    public int shoulder;
+    public int elbow;
+    public int wristVertical;
+    public int wristRotation;
+    public int gripper;
 }
