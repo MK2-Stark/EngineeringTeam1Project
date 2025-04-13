@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 public class SendRequest : MonoBehaviour
 {
 
-    private string ipToSendTo = "";
+    private string ipToSendTo = "https://10c5-37-228-211-85.ngrok-free.app/vr";
     private string filePath;
 
     void Start()
@@ -120,7 +120,7 @@ public class SendRequest : MonoBehaviour
         ​"gripper" : 10
         }
          */
-        //StartCoroutine(SendGetRequestToRobot(ipToSendTo, json));
+        StartCoroutine(SendGetRequestToRobot(ipToSendTo, json));
     }
 
     private IEnumerator SendGetRequestToRobot(string url, string thejson)
